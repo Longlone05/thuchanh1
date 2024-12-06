@@ -10,10 +10,10 @@ def max_profit(stock_prices):
         max_profit = max(max_profit, profit)  # Cập nhật lợi nhuận tối đa nếu cần
         min_price = min(min_price, price)  # Cập nhật giá mua thấp nhất
 
-    return max_profit
+    return max_profit,min_price,price
 
 # Nhập giá cổ phiếu từ người dùng
 n = list(map(int, input("Nhập giá cổ phiếu (cách nhau bởi dấu cách): ").split()))
 
 # Hiển thị lợi nhuận tối đa
-print("Lợi nhuận tối đa có thể đạt được:", max_profit(n))
+print("Lợi nhuận tối đa có thể đạt được:(lợi nhuận, điểm mua, điểm bán):", max_profit(n))
